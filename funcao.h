@@ -2,7 +2,7 @@
 #define FUNCAO_H_INCLUDED
 #include <time.h>
 
-//  Aqui irão ficar nossas funções
+//  Aqui irÃ£o ficar nossas funÃ§Ãµes
 /* EXEMPLO:
 int Reserva()
 {
@@ -37,6 +37,39 @@ int InicializaDados(int Voo[50][12])
        printf("\n\n");
     }
 }
+int ExcluirReserva (int Voo[50][12])
+{
+    int n,i,j,a,b,c,cpf2;
+    a=0;
+printf("digite o numero do voo\n");
+scanf("%d",&n);
 
+for(i=0; i<50; i++)
+    { if (n==Voo[i][0]) {
+     a=1+1;
+     b=i;
+      printf("\nDigite o cpf do passageiro que deseja excluir a reserva\n");
+      scanf ("%d",&cpf2);
+    }
+    }
+       for(j=1;j<12;j++)
+       {
+
+
+      if (cpf2==Voo[b][j]) {
+
+       printf("\nO passageiro de cpf %d foi excluido com sucesso do Voo %d",cpf2,n);
+      }
+
+       }
+
+
+ if (a!=2) {
+      printf("\nERRO: Codigo 0"); }
+
+
+
+
+}
 
 #endif // FUNCAO_H_INCLUDED
