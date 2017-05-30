@@ -37,6 +37,8 @@ int main()
   switch (menu){
   	case '1': InicializaDados(Voo);
 	break;
+	case '3': ExcluirReserva(Voo);
+    break;
   }
   }while(menu!='5');
 }
