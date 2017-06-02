@@ -20,15 +20,17 @@ int main()
       Voo[i][11]=10;
       for(j=1;j<10;j++)
       {
-          cpf = Gerador_CPF();
-          if(cpf != cpf){
-            Voo[i][j]=cpf;
-          }else{
-            cpf =  Gerador_CPF();
-          }
-
+            cpf = Gerador_CPF();
+            if(cpf<0)
+            {
+            	Voo[i][j]= 0;
+			}else{
+				Voo[i][j]=cpf;
+			}
       }
-  }
+     
+ }
+     
 
   do{
 

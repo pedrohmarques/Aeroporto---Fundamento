@@ -13,14 +13,14 @@ int Reserva()
 
 int Gerador_CPF()
 {
-    int i,cpfnum;
-    srand(time(NULL));
-    cpfnum =0;
-    for (i = 0; i < 8; i++)
-    {
-        cpfnum = (rand() % 9)+cpfnum*10;
+    int cpf,i;
+    
+	cpf = (int *) malloc(sizeof(int) * 10);
+     
+    for(i = 0; i < 8; i++) {
+        cpf = (rand() % 9-0)+cpf*10;
     }
-    return cpfnum;
+    return cpf;
 }
 
 int InicializaDados(int Voo[50][12])
@@ -29,10 +29,9 @@ int InicializaDados(int Voo[50][12])
 
     for(i=0; i<50; i++)
     {
-    //printf("\nInformacao de Voo: %d\n",Voo[i][0]);
-       for(j=0;j<12;j++)
+     for(j=0;j<11;j++)
        {
-          printf("%d ",Voo[i][j]);
+       	  	printf("%d ",Voo[i][j]);	  
        }
        printf("\n\n");
     }
@@ -42,8 +41,8 @@ int ExcluirReserva (int Voo[50][12])
 {
     int n,i,j,a,b,c,cpf2;
     a=0;
-printf("digite o numero do voo\n");
-scanf("%d",&n);
+	printf("digite o numero do voo\n");
+	scanf("%d",&n);
 
 for(i=0; i<50; i++)
     { 
