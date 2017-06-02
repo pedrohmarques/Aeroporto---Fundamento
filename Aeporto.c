@@ -28,9 +28,9 @@ int main()
 				Voo[i][j]=cpf;
 			}
       }
-     
+
  }
-     
+
 
   do{
 
@@ -40,6 +40,8 @@ int main()
   	case '1': InicializaDados(Voo);
 	break;
 	case '3': ExcluirReserva(Voo);
+	break;
+	case '4': ImprimirReserva(Voo);
 	break;
   }
   }while(menu!='5');
