@@ -40,7 +40,8 @@ int InicializaDados(int Voo[50][12])
 
 int ExcluirReserva (int Voo[50][12])
 {
-    int n,i,j,a,b,c,cpf2;
+    int n,i,j,a,b,c,cpf2,erro;
+    erro=0;
     a=0;
     printf("digite o numero do voo\n");
     scanf("%d",&n);
@@ -60,14 +61,18 @@ int ExcluirReserva (int Voo[50][12])
                 {
                     printf("\nO passageiro de cpf %d foi excluido com sucesso do Voo %d",cpf2,n);
                     Voo[b][j]=0;
+                    erro=1;
                 }
             }
         }
     }
-
+	if(erro==0)
+	{
+		printf("\nERRO: Codigo 1 - Passageiro Inexistente");
+	}
     if (a!=2)
     {
-        printf("\nERRO: Codigo 0");
+        printf("\nERRO: Codigo 0 - Voo nao existe");
     }
 }
 
@@ -220,7 +225,7 @@ int ImprimirReserva (int Voo[50][12])
     if(erro==1)
     {
 
-        printf("\nERRO: Codigo 0");
+        printf("\nERRO: Codigo 0 - Voo Inexistente");
     }else{
         printf("Vagas: %d\nReservas: %d",contVaga,contReser);
     }
