@@ -15,13 +15,13 @@ int main()
         Voo[i+40][0]=5000+i;
     }
 
-    for(i=0; i<40; i++)
+    for(i=0; i<50; i++)
     {
         Voo[i][11]=10;
         for(j=1; j<10; j++)
         {
             cpf = Gerador_CPF();
-            if(cpf<0)
+            if(cpf<=0)
             {
                 Voo[i][j]=0;
             }
